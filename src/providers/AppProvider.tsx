@@ -4,8 +4,13 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createConfig, http, WagmiProvider } from "wagmi";
 import { sepolia } from "viem/chains";
 import { ReactNode } from "react";
+import { metaMask } from "wagmi/connectors";
 
-export const connectors = [];
+export const connectors = [
+  metaMask({
+    infuraAPIKey: process.env.NEXT_PUBLIC_INFURA_API_KEY,
+  }),
+];
 
 const queryClient = new QueryClient();
 
@@ -22,9 +27,7 @@ export const wagmiConfig = createConfig({
 export function AppProvider({ children }: { children: ReactNode }) {
   return (
     <QueryClientProvider client={queryClient}>
-      <WagmiProvider config={wagmiConfig}>
-        {children}
-      </WagmiProvider>
+      <WagmiProvider config={wagmiConfig}>{children}</WagmiProvider>
     </QueryClientProvider>
   );
 }
