@@ -29,15 +29,15 @@ export default function Home() {
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <button
-            className="rounded-full border border-solid px-4 py-2"
-              onClick={() => {
-                console.log("clicked");
-              }}
-            >
-              Connect Wallet
-            </button>
+            className="rounded-full border border-solid px-4 py-2 cursor-pointer hover:bg-gray-100"
+            onClick={() => {
+              console.log("clicked");
+            }}
+          >
+            Connect Wallet
+          </button>
           <button
-            className="rounded-full border border-solid px-4 py-2"
+            className="rounded-full border border-solid px-4 py-2 cursor-pointer hover:bg-gray-100"
             onClick={() => {
               console.log("clicked");
             }}
