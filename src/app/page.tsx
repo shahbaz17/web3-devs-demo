@@ -167,7 +167,7 @@ export default function Home() {
               </div>
               <div className="text-sm text-gray-600">
                 <p>
-                  Transaction ID:{" "}
+                  Data ID:{" "}
                   <code className="bg-gray-100 px-1 rounded">{data.id}</code>
                 </p>
               </div>
